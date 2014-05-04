@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+    <title>DVL</title>
+    <style>
+      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      textarea.emscripten { font-family: monospace; width: 80%; }
+      div.emscripten { text-align: center; }
+      div.emscripten_border { border: 1px solid black; }
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+      canvas.emscripten { border: 0px none; }
+    </style>
+  </head>
+
+  <body>
+    <hr/>
+
+    <div class="emscripten" id="status">Downloading...</div>
+
+    <div class="emscripten">
+      <progress value="0" max="100" id="progress" hidden=1></progress>  
+    </div>
+
+    <div class="emscripten_border">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+
+    <hr/>
+
+    <div class="emscripten">
+      <input type="button" value="Load 'Teapot' Scene" onclick="Module.ccall('LoadScene', null, ['string'], ['file://teapot.vds'])">
+      <input type="button" value="Load '998 Clutch' Scene" onclick="Module.ccall('LoadScene', null, ['string'], ['file://998.vds'])">
+      <input type="button" value="Load CGM" onclick="Module.ccall('LoadScene', null, ['string'], ['file://cgm.cgm'])">
+<br>
+      <input type="button" value="Fullscreen" onclick="Module.requestFullScreen(false, true)">
+      <input type="button" value="Toggle debug info" onclick="Module.ccall('ToggleDebug', null)">
+      <input type="button" value="Play Procedure" onclick="Module.ccall('PlayProcedure', null)">
+<br>
+      <textarea id="query" rows="3">everything() select()</textarea>
+      <input type="button" value="Run Query" onclick="Module.print(Module.ccall('GroestlCoinHash', 'string', ['string'], [document.getElementById('query').value]))">
+
+      <p id="selection"></p>
+    </div>
+    
+    <hr/>
+
+    <textarea class="emscripten" id="output" rows="20" readonly></textarea>
+
+    <hr>
+
+    <script type='text/javascript'>
+//http://www.html5rocks.com/en/mobile/touch/
+//document.body.addEventListener('touchmove', function(event) {
+//  event.preventDefault();
+//}, false); 
+
+      // connect to canvas
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          var element = document.getElementById('output');
+          element.value = ''; // clear browser cache
+          return function(text) {
+            text = Array.prototype.slice.call(arguments).join(' ');
+            // These replacements are necessary if you render to raw HTML
+            //text = text.replace(/&/g, "&amp;");
+            //text = text.replace(/</g, "&lt;");
+            //text = text.replace(/>/g, "&gt;");
+            //text = text.replace('\n', '<br>', 'g');
+            element.value += text + "\n";
+            element.scrollTop = 99999; // focus on bottom
+          };
+        })(),
+        printErr: function(text) {
+          text = Array.prototype.slice.call(arguments).join(' ');
+          if (0) { // XXX disabled for safety typeof dump == 'function') {
+            dump(text + '\n'); // fast, straight to the real console
+          } else {
+            console.log(text);
+          }
+        },
+        canvas: document.getElementById('canvas'),
+        setStatus: function(text) {
+          if (Module.setStatus.interval) clearInterval(Module.setStatus.interval);
+          var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+          var statusElement = document.getElementById('status');
+          var progressElement = document.getElementById('progress');
+          if (m) {
+            text = m[1];
+            progressElement.value = parseInt(m[2])*100;
+            progressElement.max = parseInt(m[4])*100;
+            progressElement.hidden = false;
+          } else {
+            progressElement.value = null;
+            progressElement.max = null;
+            progressElement.hidden = true;
+          }
+          statusElement.innerHTML = text;
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+        }
+      };
+
+      //Module['TOTAL_MEMORY'] = 268435456;//needed for Super Sport 38
+      Module['TOTAL_MEMORY'] = 67108864;//needed for 998 Clutch
+      Module['doNotCaptureKeyboard'] = true;//otherwise you can't type anything into edit fields
+
+      Module.setStatus('Downloading...');
+    </script>
+
+	<script>
+		function jDVLClient_Constructor(szClientID) {
+			Module.print('jDVLClient_Constructor("' + szClientID + '");');
+		}
+
+		function jDVLClient_Destructor(szClientID) {
+			Module.print('jDVLClient_Destructor("' + szClientID + '");');
+		}
+
+		function jDVLClient_OnNodeSelectionChanged(szClientID, szSceneID, uNumberOfSelectedNodes, idFirstSelectedNode) {
+			Module.print('jDVLClient_OnNodeSelectionChanged("' + szClientID + '", "' + szSceneID + '", ' + uNumberOfSelectedNodes + ', "' + idFirstSelectedNode + '");');
+		}
+
+		function jDVLClient_OnStepEvent(szClientID, type, stepId) {
+			Module.print('jDVLClient_OnStepEvent("' + szClientID + '", ' + type + ', "' + stepId + '");');
+		}
+
+		function jDVLClient_LogMessage(szClientID, type, szSource, szText) {
+			Module.print('jDVLClient_LogMessage("' + szClientID + '", ' + type + ', "' + szSource + '", "' + szText + '");');
+		}
+
+		function jDVLClient_NotifyFileLoadProgress(szClientID, fProgress) {
+			Module.print('jDVLClient_NotifyFileLoadProgress("' + szClientID + '", ' + fProgress * 100.0 + '%);');
+			return 1;
+		}
+
+		function jDVLClient_NotifyFrameStarted(szClientID) {
+			Module.print('jDVLClient_NotifyFrameStarted("' + szClientID + '");');
+		}
+
+		function jDVLClient_NotifyFrameFinished(szClientID) {
+			Module.print('jDVLClient_NotifyFrameFinished("' + szClientID + '");');
+		}
+	</script>
+	<script type="text/javascript" src="./grs.js"></script>
+  </body>
+</html>
