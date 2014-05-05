@@ -73,7 +73,7 @@ ninja.seeder = {
 			document.getElementById("seedpool").innerHTML = poolHex;
 			document.getElementById("seedpooldisplay").innerHTML = poolHex;
 		}
-		document.getElementById("mousemovelimit").innerHTML = (ninja.seeder.seedLimit - ninja.seeder.seedCount);
+		document.getElementById("mousemovelimit").innerHTML = '<font color="red"><b>' + (ninja.seeder.seedLimit - ninja.seeder.seedCount) + '</b></font>';
 	},
 
 	showPoint: function (x, y) {
