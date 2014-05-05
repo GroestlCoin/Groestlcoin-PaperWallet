@@ -37,7 +37,8 @@ Bitcoin.Address.prototype.getHashBase64 = function () {
 Bitcoin.Address.decodeString = function (string) {
 	var bytes = Bitcoin.Base58.decode(string);
 	var hash = bytes.slice(0, 21);
-	var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
+	//var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
+	var checksum = Crypto.util.hexToBytes(Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(hash)]))
 
 	if (checksum[0] != bytes[21] ||
 			checksum[1] != bytes[22] ||

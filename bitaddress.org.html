@@ -4769,18 +4769,10 @@ Bitcoin.Address.prototype.toString = function () {
 	// Version
 	hash.unshift(this.version);
 	//var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
-console.log(Crypto.util.bytesToHex(hash));
-console.log(hash);
-	var xxx = Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(hash)]);
-console.log(xxx);
-	var checksum = Crypto.util.hexToBytes(xxx);
-console.log(checksum);
+	var checksum = Crypto.util.hexToBytes(Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(hash)]))
 
 	var bytes = hash.concat(checksum.slice(0, 4));
-console.log(bytes);
-	var ret = Bitcoin.Base58.encode(bytes);
-console.log(ret);
-	return ret;
+	return Bitcoin.Base58.encode(bytes);
 };
 
 Bitcoin.Address.prototype.getHashBase64 = function () {
