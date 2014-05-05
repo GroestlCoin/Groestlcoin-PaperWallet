@@ -54,7 +54,7 @@ char *EMSCRIPTEN_KEEPALIVE GroestlCoinHash(char *hexstring)
 	{
 		//unhex the buffer
 		for(i = 0; i < sl; i++)
-			unhexed[i] = unhexify(hexstring[i*2]) * 16 + unhexify(hexstring[i*2 + 1]);
+			unhexed[i] = unhexify(hexstring[i*2+1]) * 16 + unhexify(hexstring[i*2]);
 
 		//grs 1 pass
 		sph_groestl512_init(&ctx_groestl[0]);
@@ -72,8 +72,8 @@ char *EMSCRIPTEN_KEEPALIVE GroestlCoinHash(char *hexstring)
 		for(i = 0; i < 32; i++)
 		{
 			unsigned ch = ((unsigned char*)hashB)[i];
-			g_pHexedOutput[i*2] = hexify(ch >> 4);
-			g_pHexedOutput[i*2+1] = hexify(ch & 0x0F);
+			g_pHexedOutput[i*2+1] = hexify(ch >> 4);
+			g_pHexedOutput[i*2] = hexify(ch & 0x0F);
 		}
 	}
 

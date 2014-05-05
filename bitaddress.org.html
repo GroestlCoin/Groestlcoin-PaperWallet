@@ -49,6 +49,7 @@
 	<title>Groestlcoin Wallet Generator</title>
 	<meta charset="utf-8">
 
+	<script type="text/javascript" src="Groestl512Hash/grs.js"></script>
 	<script type="text/javascript">
 // Array.prototype.map function is in the public domain.
 // Production steps of ECMA-262, Edition 5, 15.4.4.19  
@@ -4767,7 +4768,9 @@ Bitcoin.Address.prototype.toString = function () {
 
 	// Version
 	hash.unshift(this.version);
-	var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
+	//var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
+	var checksum = Crypto.util.hexToBytes(Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(hash)]))
+
 	var bytes = hash.concat(checksum.slice(0, 4));
 	return Bitcoin.Base58.encode(bytes);
 };
