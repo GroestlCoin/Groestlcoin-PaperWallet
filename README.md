@@ -1,6 +1,6 @@
 PaperWallet
 ===========
-Fork of 2.8.1 release of bitaddress (https://github.com/pointbiz/bitaddress.org/releases/tag/v2.8.1), modified to work with GroestlCoin.
+Fork of 2.8.1 release of bitaddress (https://github.com/pointbiz/bitaddress.org/releases/tag/v2.8.1), modified to work with Groestlcoin.
 
 If you want to see the history of changes, get 2.8.1 from https://github.com/pointbiz/bitaddress.org/releases/tag/v2.8.1 and get original checkin from this repo. Compare them. They will match. After this, it'll be easy to track changes.
 
