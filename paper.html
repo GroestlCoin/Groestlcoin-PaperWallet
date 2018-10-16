@@ -6,10 +6,10 @@
 
 	Notice of Copyrights and Licenses:
 	***********************************
-	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz). 
+	The bitaddress.org project, software and embedded resources are copyright bitaddress.org (pointbiz).
 	The bitaddress.org name and logo are not part of the open source license.
 
-	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others. 
+	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
 	The individual copyrights are included throughout the document along with their licenses.
 	Included JavaScript libraries are separated with HTML script tags.
 
@@ -28,19 +28,19 @@
 	The bitaddress.org software is available under The MIT License (MIT)
 	Copyright (c) 2011-2013 bitaddress.org (pointbiz)
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-	associated documentation files (the "Software"), to deal in the Software without restriction, including 
-	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject 
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+	associated documentation files (the "Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
 	to the following conditions:
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial 
+	The above copyright notice and this permission notice shall be included in all copies or substantial
 	portions of the Software.
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
-	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 	GitHub Repository: https://github.com/pointbiz/bitaddress.org
@@ -1435,40 +1435,40 @@ function copyTempDouble(ptr) {
 }
 
 
-   
+
   Module["_i64Add"] = _i64Add;
 
-   
+
   Module["_memset"] = _memset;
 
-   
+
   Module["_bitshift64Lshr"] = _bitshift64Lshr;
 
-   
+
   Module["_bitshift64Shl"] = _bitshift64Shl;
 
   function _abort() {
       Module['abort']();
     }
 
-   
+
   Module["_strlen"] = _strlen;
 
-  
+
   function _emscripten_memcpy_big(dest, src, num) {
       HEAPU8.set(HEAPU8.subarray(src, src+num), dest);
       return dest;
-    } 
+    }
   Module["_memcpy"] = _memcpy;
 
-  
-  
+
+
   var ___errno_state=0;function ___setErrNo(value) {
       // For convenient setting and returning of errno.
       HEAP32[((___errno_state)>>2)]=value;
       return value;
     }
-  
+
   var ERRNO_CODES={EPERM:1,ENOENT:2,ESRCH:3,EINTR:4,EIO:5,ENXIO:6,E2BIG:7,ENOEXEC:8,EBADF:9,ECHILD:10,EAGAIN:11,EWOULDBLOCK:11,ENOMEM:12,EACCES:13,EFAULT:14,ENOTBLK:15,EBUSY:16,EEXIST:17,EXDEV:18,ENODEV:19,ENOTDIR:20,EISDIR:21,EINVAL:22,ENFILE:23,EMFILE:24,ENOTTY:25,ETXTBSY:26,EFBIG:27,ENOSPC:28,ESPIPE:29,EROFS:30,EMLINK:31,EPIPE:32,EDOM:33,ERANGE:34,ENOMSG:42,EIDRM:43,ECHRNG:44,EL2NSYNC:45,EL3HLT:46,EL3RST:47,ELNRNG:48,EUNATCH:49,ENOCSI:50,EL2HLT:51,EDEADLK:35,ENOLCK:37,EBADE:52,EBADR:53,EXFULL:54,ENOANO:55,EBADRQC:56,EBADSLT:57,EDEADLOCK:35,EBFONT:59,ENOSTR:60,ENODATA:61,ETIME:62,ENOSR:63,ENONET:64,ENOPKG:65,EREMOTE:66,ENOLINK:67,EADV:68,ESRMNT:69,ECOMM:70,EPROTO:71,EMULTIHOP:72,EDOTDOT:73,EBADMSG:74,ENOTUNIQ:76,EBADFD:77,EREMCHG:78,ELIBACC:79,ELIBBAD:80,ELIBSCN:81,ELIBMAX:82,ELIBEXEC:83,ENOSYS:38,ENOTEMPTY:39,ENAMETOOLONG:36,ELOOP:40,EOPNOTSUPP:95,EPFNOSUPPORT:96,ECONNRESET:104,ENOBUFS:105,EAFNOSUPPORT:97,EPROTOTYPE:91,ENOTSOCK:88,ENOPROTOOPT:92,ESHUTDOWN:108,ECONNREFUSED:111,EADDRINUSE:98,ECONNABORTED:103,ENETUNREACH:101,ENETDOWN:100,ETIMEDOUT:110,EHOSTDOWN:112,EHOSTUNREACH:113,EINPROGRESS:115,EALREADY:114,EDESTADDRREQ:89,EMSGSIZE:90,EPROTONOSUPPORT:93,ESOCKTNOSUPPORT:94,EADDRNOTAVAIL:99,ENETRESET:102,EISCONN:106,ENOTCONN:107,ETOOMANYREFS:109,EUSERS:87,EDQUOT:122,ESTALE:116,ENOTSUP:95,ENOMEDIUM:123,EILSEQ:84,EOVERFLOW:75,ECANCELED:125,ENOTRECOVERABLE:131,EOWNERDEAD:130,ESTRPIPE:86};function _sysconf(name) {
       // long sysconf(int name);
       // http://pubs.opengroup.org/onlinepubs/009695399/functions/sysconf.html
@@ -1633,11 +1633,11 @@ function copyTempDouble(ptr) {
 
   var _llvm_memcpy_p0i8_p0i8_i32=_memcpy;
 
-  
-  
-  
+
+
+
   var ERRNO_MESSAGES={0:"Success",1:"Not super-user",2:"No such file or directory",3:"No such process",4:"Interrupted system call",5:"I/O error",6:"No such device or address",7:"Arg list too long",8:"Exec format error",9:"Bad file number",10:"No children",11:"No more processes",12:"Not enough core",13:"Permission denied",14:"Bad address",15:"Block device required",16:"Mount device busy",17:"File exists",18:"Cross-device link",19:"No such device",20:"Not a directory",21:"Is a directory",22:"Invalid argument",23:"Too many open files in system",24:"Too many open files",25:"Not a typewriter",26:"Text file busy",27:"File too large",28:"No space left on device",29:"Illegal seek",30:"Read only file system",31:"Too many links",32:"Broken pipe",33:"Math arg out of domain of func",34:"Math result not representable",35:"File locking deadlock error",36:"File or path name too long",37:"No record locks available",38:"Function not implemented",39:"Directory not empty",40:"Too many symbolic links",42:"No message of desired type",43:"Identifier removed",44:"Channel number out of range",45:"Level 2 not synchronized",46:"Level 3 halted",47:"Level 3 reset",48:"Link number out of range",49:"Protocol driver not attached",50:"No CSI structure available",51:"Level 2 halted",52:"Invalid exchange",53:"Invalid request descriptor",54:"Exchange full",55:"No anode",56:"Invalid request code",57:"Invalid slot",59:"Bad font file fmt",60:"Device not a stream",61:"No data (for no delay io)",62:"Timer expired",63:"Out of streams resources",64:"Machine is not on the network",65:"Package not installed",66:"The object is remote",67:"The link has been severed",68:"Advertise error",69:"Srmount error",70:"Communication error on send",71:"Protocol error",72:"Multihop attempted",73:"Cross mount point (not really error)",74:"Trying to read unreadable message",75:"Value too large for defined data type",76:"Given log. name not unique",77:"f.d. invalid for this operation",78:"Remote address changed",79:"Can   access a needed shared lib",80:"Accessing a corrupted shared lib",81:".lib section in a.out corrupted",82:"Attempting to link in too many libs",83:"Attempting to exec a shared library",84:"Illegal byte sequence",86:"Streams pipe error",87:"Too many users",88:"Socket operation on non-socket",89:"Destination address required",90:"Message too long",91:"Protocol wrong type for socket",92:"Protocol not available",93:"Unknown protocol",94:"Socket type not supported",95:"Not supported",96:"Protocol family not supported",97:"Address family not supported by protocol family",98:"Address already in use",99:"Address not available",100:"Network interface is not configured",101:"Network is unreachable",102:"Connection reset by network",103:"Connection aborted",104:"Connection reset by peer",105:"No buffer space available",106:"Socket is already connected",107:"Socket is not connected",108:"Can't send after socket shutdown",109:"Too many references",110:"Connection timed out",111:"Connection refused",112:"Host is down",113:"Host is unreachable",114:"Socket already connected",115:"Connection already in progress",116:"Stale file handle",122:"Quota exceeded",123:"No medium (in tape drive)",125:"Operation canceled",130:"Previous owner died",131:"State not recoverable"};
-  
+
   var TTY={ttys:[],init:function () {
         // https://github.com/kripken/emscripten/pull/1555
         // if (ENVIRONMENT_IS_NODE) {
@@ -1756,7 +1756,7 @@ function copyTempDouble(ptr) {
             tty.output.push(TTY.utf8.processCChar(val));
           }
         }}};
-  
+
   var MEMFS={ops_table:null,CONTENT_OWNING:1,CONTENT_FLEXIBLE:2,CONTENT_FIXED:3,mount:function (mount) {
         return MEMFS.createNode(null, '/', 16384 | 511 /* 0777 */, 0);
       },createNode:function (parent, name, mode, dev) {
@@ -2019,7 +2019,7 @@ function copyTempDouble(ptr) {
           }
           return { ptr: ptr, allocated: allocated };
         }}};
-  
+
   var IDBFS={dbs:{},indexedDB:function () {
         return window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
       },DB_VERSION:21,DB_STORE_NAME:"FILE_DATA",mount:function (mount) {
@@ -2028,13 +2028,13 @@ function copyTempDouble(ptr) {
       },syncfs:function (mount, populate, callback) {
         IDBFS.getLocalSet(mount, function(err, local) {
           if (err) return callback(err);
-  
+
           IDBFS.getRemoteSet(mount, function(err, remote) {
             if (err) return callback(err);
-  
+
             var src = populate ? remote : local;
             var dst = populate ? local : remote;
-  
+
             IDBFS.reconcile(src, dst, callback);
           });
         });
@@ -2044,7 +2044,7 @@ function copyTempDouble(ptr) {
         if (db) {
           return callback(null, db);
         }
-  
+
         var req;
         try {
           req = IDBFS.indexedDB().open(name, IDBFS.DB_VERSION);
@@ -2054,20 +2054,20 @@ function copyTempDouble(ptr) {
         req.onupgradeneeded = function(e) {
           var db = e.target.result;
           var transaction = e.target.transaction;
-  
+
           var fileStore;
-  
+
           if (db.objectStoreNames.contains(IDBFS.DB_STORE_NAME)) {
             fileStore = transaction.objectStore(IDBFS.DB_STORE_NAME);
           } else {
             fileStore = db.createObjectStore(IDBFS.DB_STORE_NAME);
           }
-  
+
           fileStore.createIndex('timestamp', 'timestamp', { unique: false });
         };
         req.onsuccess = function() {
           db = req.result;
-  
+
           // add to the cache
           IDBFS.dbs[name] = db;
           callback(null, db);
@@ -2077,7 +2077,7 @@ function copyTempDouble(ptr) {
         };
       },getLocalSet:function (mount, callback) {
         var entries = {};
-  
+
         function isRealDir(p) {
           return p !== '.' && p !== '..';
         };
@@ -2086,54 +2086,54 @@ function copyTempDouble(ptr) {
             return PATH.join2(root, p);
           }
         };
-  
+
         var check = FS.readdir(mount.mountpoint).filter(isRealDir).map(toAbsolute(mount.mountpoint));
-  
+
         while (check.length) {
           var path = check.pop();
           var stat;
-  
+
           try {
             stat = FS.stat(path);
           } catch (e) {
             return callback(e);
           }
-  
+
           if (FS.isDir(stat.mode)) {
             check.push.apply(check, FS.readdir(path).filter(isRealDir).map(toAbsolute(path)));
           }
-  
+
           entries[path] = { timestamp: stat.mtime };
         }
-  
+
         return callback(null, { type: 'local', entries: entries });
       },getRemoteSet:function (mount, callback) {
         var entries = {};
-  
+
         IDBFS.getDB(mount.mountpoint, function(err, db) {
           if (err) return callback(err);
-  
+
           var transaction = db.transaction([IDBFS.DB_STORE_NAME], 'readonly');
           transaction.onerror = function() { callback(this.error); };
-  
+
           var store = transaction.objectStore(IDBFS.DB_STORE_NAME);
           var index = store.index('timestamp');
-  
+
           index.openKeyCursor().onsuccess = function(event) {
             var cursor = event.target.result;
-  
+
             if (!cursor) {
               return callback(null, { type: 'remote', db: db, entries: entries });
             }
-  
+
             entries[cursor.primaryKey] = { timestamp: cursor.key };
-  
+
             cursor.continue();
           };
         });
       },loadLocalEntry:function (path, callback) {
         var stat, node;
-  
+
         try {
           var lookup = FS.lookupPath(path);
           node = lookup.node;
@@ -2141,7 +2141,7 @@ function copyTempDouble(ptr) {
         } catch (e) {
           return callback(e);
         }
-  
+
         if (FS.isDir(stat.mode)) {
           return callback(null, { timestamp: stat.mtime, mode: stat.mode });
         } else if (FS.isFile(stat.mode)) {
@@ -2158,18 +2158,18 @@ function copyTempDouble(ptr) {
           } else {
             return callback(new Error('node type not supported'));
           }
-  
+
           FS.utime(path, entry.timestamp, entry.timestamp);
         } catch (e) {
           return callback(e);
         }
-  
+
         callback(null);
       },removeLocalEntry:function (path, callback) {
         try {
           var lookup = FS.lookupPath(path);
           var stat = FS.stat(path);
-  
+
           if (FS.isDir(stat.mode)) {
             FS.rmdir(path);
           } else if (FS.isFile(stat.mode)) {
@@ -2178,7 +2178,7 @@ function copyTempDouble(ptr) {
         } catch (e) {
           return callback(e);
         }
-  
+
         callback(null);
       },loadRemoteEntry:function (store, path, callback) {
         var req = store.get(path);
@@ -2194,7 +2194,7 @@ function copyTempDouble(ptr) {
         req.onerror = function() { callback(this.error); };
       },reconcile:function (src, dst, callback) {
         var total = 0;
-  
+
         var create = [];
         Object.keys(src.entries).forEach(function (key) {
           var e = src.entries[key];
@@ -2204,7 +2204,7 @@ function copyTempDouble(ptr) {
             total++;
           }
         });
-  
+
         var remove = [];
         Object.keys(dst.entries).forEach(function (key) {
           var e = dst.entries[key];
@@ -2214,17 +2214,17 @@ function copyTempDouble(ptr) {
             total++;
           }
         });
-  
+
         if (!total) {
           return callback(null);
         }
-  
+
         var errored = false;
         var completed = 0;
         var db = src.type === 'remote' ? src.db : dst.db;
         var transaction = db.transaction([IDBFS.DB_STORE_NAME], 'readwrite');
         var store = transaction.objectStore(IDBFS.DB_STORE_NAME);
-  
+
         function done(err) {
           if (err) {
             if (!done.errored) {
@@ -2237,9 +2237,9 @@ function copyTempDouble(ptr) {
             return callback(null);
           }
         };
-  
+
         transaction.onerror = function() { done(this.error); };
-  
+
         // sort paths in ascending order so directory entries are created
         // before the files inside them
         create.sort().forEach(function (path) {
@@ -2255,7 +2255,7 @@ function copyTempDouble(ptr) {
             });
           }
         });
-  
+
         // sort paths in descending order so files are deleted before their
         // parent directories
         remove.sort().reverse().forEach(function(path) {
@@ -2266,7 +2266,7 @@ function copyTempDouble(ptr) {
           }
         });
       }};
-  
+
   var NODEFS={isWindows:false,staticInit:function () {
         NODEFS.isWindows = !!process.platform.match(/^win/);
       },mount:function (mount) {
@@ -2285,7 +2285,7 @@ function copyTempDouble(ptr) {
         try {
           stat = fs.lstatSync(path);
           if (NODEFS.isWindows) {
-            // On Windows, directories return permission bits 'rw-rw-rw-', even though they have 'rwxrwxrwx', so 
+            // On Windows, directories return permission bits 'rw-rw-rw-', even though they have 'rwxrwxrwx', so
             // propagate write bits to execute bits.
             stat.mode = stat.mode | ((stat.mode & 146) >> 1);
           }
@@ -2486,21 +2486,21 @@ function copyTempDouble(ptr) {
               }
             }
           }
-  
+
           if (position < 0) {
             throw new FS.ErrnoError(ERRNO_CODES.EINVAL);
           }
-  
+
           stream.position = position;
           return position;
         }}};
-  
+
   var _stdin=allocate(1, "i32*", ALLOC_STATIC);
-  
+
   var _stdout=allocate(1, "i32*", ALLOC_STATIC);
-  
+
   var _stderr=allocate(1, "i32*", ALLOC_STATIC);
-  
+
   function _fflush(stream) {
       // int fflush(FILE *stream);
       // http://pubs.opengroup.org/onlinepubs/000095399/functions/fflush.html
@@ -2511,7 +2511,7 @@ function copyTempDouble(ptr) {
       },lookupPath:function (path, opts) {
         path = PATH.resolve(FS.cwd(), path);
         opts = opts || {};
-  
+
         var defaults = {
           follow_mount: true,
           recurse_count: 0
@@ -2521,37 +2521,37 @@ function copyTempDouble(ptr) {
             opts[key] = defaults[key];
           }
         }
-  
+
         if (opts.recurse_count > 8) {  // max recursive lookup of 8
           throw new FS.ErrnoError(ERRNO_CODES.ELOOP);
         }
-  
+
         // split the path
         var parts = PATH.normalizeArray(path.split('/').filter(function(p) {
           return !!p;
         }), false);
-  
+
         // start at the root
         var current = FS.root;
         var current_path = '/';
-  
+
         for (var i = 0; i < parts.length; i++) {
           var islast = (i === parts.length-1);
           if (islast && opts.parent) {
             // stop resolving
             break;
           }
-  
+
           current = FS.lookupNode(current, parts[i]);
           current_path = PATH.join2(current_path, parts[i]);
-  
+
           // jump to the mount's root node if this is a mountpoint
           if (FS.isMountpoint(current)) {
             if (!islast || (islast && opts.follow_mount)) {
               current = current.mounted.root;
             }
           }
-  
+
           // by default, lookupPath will not follow a symlink if it is the final path component.
           // setting opts.follow = true will override this behavior.
           if (!islast || opts.follow) {
@@ -2559,17 +2559,17 @@ function copyTempDouble(ptr) {
             while (FS.isLink(current.mode)) {
               var link = FS.readlink(current_path);
               current_path = PATH.resolve(PATH.dirname(current_path), link);
-              
+
               var lookup = FS.lookupPath(current_path, { recurse_count: opts.recurse_count });
               current = lookup.node;
-  
+
               if (count++ > 40) {  // limit max consecutive symlinks to 40 (SYMLOOP_MAX).
                 throw new FS.ErrnoError(ERRNO_CODES.ELOOP);
               }
             }
           }
         }
-  
+
         return { path: current_path, node: current };
       },getPath:function (node) {
         var path;
@@ -2584,8 +2584,8 @@ function copyTempDouble(ptr) {
         }
       },hashName:function (parentid, name) {
         var hash = 0;
-  
-  
+
+
         for (var i = 0; i < name.length; i++) {
           hash = ((hash << 5) - hash + name.charCodeAt(i)) | 0;
         }
@@ -2638,13 +2638,13 @@ function copyTempDouble(ptr) {
             this.stream_ops = {};
             this.rdev = rdev;
           };
-  
+
           FS.FSNode.prototype = {};
-  
+
           // compatibility
           var readMode = 292 | 73;
           var writeMode = 146;
-  
+
           // NOTE we must use Object.defineProperties instead of individual calls to
           // Object.defineProperty in order to make closure compiler happy
           Object.defineProperties(FS.FSNode.prototype, {
@@ -2664,11 +2664,11 @@ function copyTempDouble(ptr) {
             },
           });
         }
-  
+
         var node = new FS.FSNode(parent, name, mode, rdev);
-  
+
         FS.hashAddNode(node);
-  
+
         return node;
       },destroyNode:function (node) {
         FS.hashRemoveNode(node);
@@ -2837,25 +2837,25 @@ function copyTempDouble(ptr) {
       },getMounts:function (mount) {
         var mounts = [];
         var check = [mount];
-  
+
         while (check.length) {
           var m = check.pop();
-  
+
           mounts.push(m);
-  
+
           check.push.apply(check, m.mounts);
         }
-  
+
         return mounts;
       },syncfs:function (populate, callback) {
         if (typeof(populate) === 'function') {
           callback = populate;
           populate = false;
         }
-  
+
         var mounts = FS.getMounts(FS.root.mount);
         var completed = 0;
-  
+
         function done(err) {
           if (err) {
             if (!done.errored) {
@@ -2868,7 +2868,7 @@ function copyTempDouble(ptr) {
             callback(null);
           }
         };
-  
+
         // sync all mounts
         mounts.forEach(function (mount) {
           if (!mount.type.syncfs) {
@@ -2880,78 +2880,78 @@ function copyTempDouble(ptr) {
         var root = mountpoint === '/';
         var pseudo = !mountpoint;
         var node;
-  
+
         if (root && FS.root) {
           throw new FS.ErrnoError(ERRNO_CODES.EBUSY);
         } else if (!root && !pseudo) {
           var lookup = FS.lookupPath(mountpoint, { follow_mount: false });
-  
+
           mountpoint = lookup.path;  // use the absolute path
           node = lookup.node;
-  
+
           if (FS.isMountpoint(node)) {
             throw new FS.ErrnoError(ERRNO_CODES.EBUSY);
           }
-  
+
           if (!FS.isDir(node.mode)) {
             throw new FS.ErrnoError(ERRNO_CODES.ENOTDIR);
           }
         }
-  
+
         var mount = {
           type: type,
           opts: opts,
           mountpoint: mountpoint,
           mounts: []
         };
-  
+
         // create a root node for the fs
         var mountRoot = type.mount(mount);
         mountRoot.mount = mount;
         mount.root = mountRoot;
-  
+
         if (root) {
           FS.root = mountRoot;
         } else if (node) {
           // set as a mountpoint
           node.mounted = mount;
-  
+
           // add the new mount to the current mount's children
           if (node.mount) {
             node.mount.mounts.push(mount);
           }
         }
-  
+
         return mountRoot;
       },unmount:function (mountpoint) {
         var lookup = FS.lookupPath(mountpoint, { follow_mount: false });
-  
+
         if (!FS.isMountpoint(lookup.node)) {
           throw new FS.ErrnoError(ERRNO_CODES.EINVAL);
         }
-  
+
         // destroy the nodes for this mount, and all its child mounts
         var node = lookup.node;
         var mount = node.mounted;
         var mounts = FS.getMounts(mount);
-  
+
         Object.keys(FS.nameTable).forEach(function (hash) {
           var current = FS.nameTable[hash];
-  
+
           while (current) {
             var next = current.name_next;
-  
+
             if (mounts.indexOf(current.mount) !== -1) {
               FS.destroyNode(current);
             }
-  
+
             current = next;
           }
         });
-  
+
         // no longer a mountpoint
         node.mounted = null;
-  
+
         // remove this mount from the child mounts
         var idx = node.mount.mounts.indexOf(mount);
         assert(idx !== -1);
@@ -3280,7 +3280,7 @@ function copyTempDouble(ptr) {
         }
         // we've already handled these, don't pass down to the underlying vfs
         flags &= ~(128 | 512);
-  
+
         // register the stream with the filesystem
         var stream = FS.createStream({
           node: node,
@@ -3476,7 +3476,7 @@ function copyTempDouble(ptr) {
         // TODO deprecate the old functionality of a single
         // input / output callback and that utilizes FS.createDevice
         // and instead require a unique set of stream ops
-  
+
         // by default, we symlink the standard streams to the
         // default tty devices. however, if the standard streams
         // have been overwritten we create a unique device for
@@ -3496,16 +3496,16 @@ function copyTempDouble(ptr) {
         } else {
           FS.symlink('/dev/tty1', '/dev/stderr');
         }
-  
+
         // open default streams for the stdin, stdout and stderr devices
         var stdin = FS.open('/dev/stdin', 'r');
         HEAP32[((_stdin)>>2)]=FS.getPtrForStream(stdin);
         assert(stdin.fd === 0, 'invalid handle for stdin (' + stdin.fd + ')');
-  
+
         var stdout = FS.open('/dev/stdout', 'w');
         HEAP32[((_stdout)>>2)]=FS.getPtrForStream(stdout);
         assert(stdout.fd === 1, 'invalid handle for stdout (' + stdout.fd + ')');
-  
+
         var stderr = FS.open('/dev/stderr', 'w');
         HEAP32[((_stderr)>>2)]=FS.getPtrForStream(stderr);
         assert(stderr.fd === 2, 'invalid handle for stderr (' + stderr.fd + ')');
@@ -3530,24 +3530,24 @@ function copyTempDouble(ptr) {
         });
       },staticInit:function () {
         FS.ensureErrnoError();
-  
+
         FS.nameTable = new Array(4096);
-  
+
         FS.mount(MEMFS, {}, '/');
-  
+
         FS.createDefaultDirectories();
         FS.createDefaultDevices();
       },init:function (input, output, error) {
         assert(!FS.init.initialized, 'FS.init was previously called. If you want to initialize later with custom parameters, remove any earlier calls (note that one is automatically added to the generated code)');
         FS.init.initialized = true;
-  
+
         FS.ensureErrnoError();
-  
+
         // Allow Module.stdin etc. to provide defaults, if none explicitly passed to us here
         Module['stdin'] = input || Module['stdin'];
         Module['stdout'] = output || Module['stdout'];
         Module['stderr'] = error || Module['stderr'];
-  
+
         FS.createStandardStreams();
       },quit:function () {
         FS.init.initialized = false;
@@ -3751,25 +3751,25 @@ function copyTempDouble(ptr) {
               var header;
               var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
               var chunkSize = 1024*1024; // Chunk size in bytes
-  
+
               if (!hasByteServing) chunkSize = datalength;
-  
+
               // Function to get a range from the remote URL.
               var doXHR = (function(from, to) {
                 if (from > to) throw new Error("invalid range (" + from + ", " + to + ") or no bytes requested!");
                 if (to > datalength-1) throw new Error("only " + datalength + " bytes available! programmer error!");
-  
+
                 // TODO: Use mozResponseArrayBuffer, responseStream, etc. if available.
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', url, false);
                 if (datalength !== chunkSize) xhr.setRequestHeader("Range", "bytes=" + from + "-" + to);
-  
+
                 // Some hints to the browser that we want binary data.
                 if (typeof Uint8Array != 'undefined') xhr.responseType = 'arraybuffer';
                 if (xhr.overrideMimeType) {
                   xhr.overrideMimeType('text/plain; charset=x-user-defined');
                 }
-  
+
                 xhr.send(null);
                 if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) throw new Error("Couldn't load " + url + ". Status: " + xhr.status);
                 if (xhr.response !== undefined) {
@@ -3789,12 +3789,12 @@ function copyTempDouble(ptr) {
                 if (typeof(lazyArray.chunks[chunkNum]) === "undefined") throw new Error("doXHR failed!");
                 return lazyArray.chunks[chunkNum];
               });
-  
+
               this._length = datalength;
               this._chunkSize = chunkSize;
               this.lengthKnown = true;
           }
-  
+
           var lazyArray = new LazyUint8Array();
           Object.defineProperty(lazyArray, "length", {
               get: function() {
@@ -3812,12 +3812,12 @@ function copyTempDouble(ptr) {
                   return this._chunkSize;
               }
           });
-  
+
           var properties = { isDevice: false, contents: lazyArray };
         } else {
           var properties = { isDevice: false, url: url };
         }
-  
+
         var node = FS.createFile(parent, name, properties, canRead, canWrite);
         // This is a total hack, but I want to get this lazy file code out of the
         // core of MEMFS. If we want to keep this lazy file concept I feel it should
@@ -4110,10 +4110,10 @@ function copyTempDouble(ptr) {
           }
         }},isFullScreen:false,pointerLock:false,moduleContextCreatedCallbacks:[],workers:[],init:function () {
         if (!Module["preloadPlugins"]) Module["preloadPlugins"] = []; // needs to exist even in workers
-  
+
         if (Browser.initted || ENVIRONMENT_IS_WORKER) return;
         Browser.initted = true;
-  
+
         try {
           new Blob();
           Browser.hasBlobConstructor = true;
@@ -4127,7 +4127,7 @@ function copyTempDouble(ptr) {
           console.log("warning: Browser does not support creating object URLs. Built-in browser image decoding will not be available.");
           Module.noImageDecoding = true;
         }
-  
+
         // Support for plugins that can process preloaded files. You can add more of these to
         // your app by creating and appending to Module.preloadPlugins.
         //
@@ -4135,7 +4135,7 @@ function copyTempDouble(ptr) {
         // it is given the file's raw data. When it is done, it calls a callback with the file's
         // (possibly modified) data. For example, a plugin might decompress a file, or it
         // might create some side data structure for use later (like an Image element, etc.).
-  
+
         var imagePlugin = {};
         imagePlugin['canHandle'] = function imagePlugin_canHandle(name) {
           return !Module.noImageDecoding && /\.(jpg|jpeg|png|bmp)$/i.test(name);
@@ -4178,7 +4178,7 @@ function copyTempDouble(ptr) {
           img.src = url;
         };
         Module['preloadPlugins'].push(imagePlugin);
-  
+
         var audioPlugin = {};
         audioPlugin['canHandle'] = function audioPlugin_canHandle(name) {
           return !Module.noAudioDecoding && name.substr(-4) in { '.ogg': 1, '.wav': 1, '.mp3': 1 };
@@ -4246,14 +4246,14 @@ function copyTempDouble(ptr) {
           }
         };
         Module['preloadPlugins'].push(audioPlugin);
-  
+
         // Canvas event setup
-  
+
         var canvas = Module['canvas'];
-        
+
         // forced aspect ratio can be enabled by defining 'forcedAspectRatio' on Module
         // Module['forcedAspectRatio'] = 4 / 3;
-        
+
         canvas.requestPointerLock = canvas['requestPointerLock'] ||
                                     canvas['mozRequestPointerLock'] ||
                                     canvas['webkitRequestPointerLock'] ||
@@ -4265,19 +4265,19 @@ function copyTempDouble(ptr) {
                                  document['msExitPointerLock'] ||
                                  function(){}; // no-op if function does not exist
         canvas.exitPointerLock = canvas.exitPointerLock.bind(document);
-  
+
         function pointerLockChange() {
           Browser.pointerLock = document['pointerLockElement'] === canvas ||
                                 document['mozPointerLockElement'] === canvas ||
                                 document['webkitPointerLockElement'] === canvas ||
                                 document['msPointerLockElement'] === canvas;
         }
-  
+
         document.addEventListener('pointerlockchange', pointerLockChange, false);
         document.addEventListener('mozpointerlockchange', pointerLockChange, false);
         document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
         document.addEventListener('mspointerlockchange', pointerLockChange, false);
-  
+
         if (Module['elementPointerLock']) {
           canvas.addEventListener("click", function(ev) {
             if (!Browser.pointerLock && canvas.requestPointerLock) {
@@ -4298,14 +4298,14 @@ function copyTempDouble(ptr) {
               antialias: false,
               alpha: false
             };
-  
+
             if (webGLContextAttributes) {
               for (var attribute in webGLContextAttributes) {
                 contextAttributes[attribute] = webGLContextAttributes[attribute];
               }
             }
-  
-  
+
+
             canvas.addEventListener('webglcontextcreationerror', onContextCreationError, false);
             try {
               ['experimental-webgl', 'webgl'].some(function(webglId) {
@@ -4325,7 +4325,7 @@ function copyTempDouble(ptr) {
         if (useWebGL) {
           // Set the background of the WebGL canvas to black
           canvas.style.backgroundColor = "black";
-  
+
           // Warn on context loss
           canvas.addEventListener('webglcontextlost', function(event) {
             alert('WebGL context lost. You will need to reload the page.');
@@ -4343,7 +4343,7 @@ function copyTempDouble(ptr) {
         Browser.resizeCanvas = resizeCanvas;
         if (typeof Browser.lockPointer === 'undefined') Browser.lockPointer = true;
         if (typeof Browser.resizeCanvas === 'undefined') Browser.resizeCanvas = false;
-  
+
         var canvas = Module['canvas'];
         var canvasContainer = canvas.parentNode;
         function fullScreenChange() {
@@ -4364,18 +4364,18 @@ function copyTempDouble(ptr) {
             Browser.isFullScreen = true;
             if (Browser.resizeCanvas) Browser.setFullScreenCanvasSize();
           } else {
-            
+
             // remove the full screen specific parent of the canvas again to restore the HTML structure from before going full screen
             var canvasContainer = canvas.parentNode;
             canvasContainer.parentNode.insertBefore(canvas, canvasContainer);
             canvasContainer.parentNode.removeChild(canvasContainer);
-            
+
             if (Browser.resizeCanvas) Browser.setWindowedCanvasSize();
           }
           if (Module['onFullScreen']) Module['onFullScreen'](Browser.isFullScreen);
           Browser.updateCanvasDimensions(canvas);
         }
-  
+
         if (!Browser.fullScreenHandlersInstalled) {
           Browser.fullScreenHandlersInstalled = true;
           document.addEventListener('fullscreenchange', fullScreenChange, false);
@@ -4383,12 +4383,12 @@ function copyTempDouble(ptr) {
           document.addEventListener('webkitfullscreenchange', fullScreenChange, false);
           document.addEventListener('MSFullscreenChange', fullScreenChange, false);
         }
-  
+
         // create a new parent to ensure the canvas has no siblings. this allows browsers to optimize full screen performance when its parent is the full screen root
         var canvasContainer = document.createElement("div");
         canvas.parentNode.insertBefore(canvasContainer, canvas);
         canvasContainer.appendChild(canvas);
-        
+
         // use parent of canvas as full screen root to allow aspect ratio correction (Firefox stretches the root to screen size)
         canvasContainer.requestFullScreen = canvasContainer['requestFullScreen'] ||
                                             canvasContainer['mozRequestFullScreen'] ||
@@ -4465,7 +4465,7 @@ function copyTempDouble(ptr) {
             Browser.mouseMovementX = Browser.getMovementX(event);
             Browser.mouseMovementY = Browser.getMovementY(event);
           }
-          
+
           // check if SDL is available
           if (typeof SDL != "undefined") {
           	Browser.mouseX = SDL.mouseX + Browser.mouseMovementX;
@@ -4475,13 +4475,13 @@ function copyTempDouble(ptr) {
           	// FIXME: ideally this should be clamped against the canvas size and zero
           	Browser.mouseX += Browser.mouseMovementX;
           	Browser.mouseY += Browser.mouseMovementY;
-          }        
+          }
         } else {
           // Otherwise, calculate the movement based on the changes
           // in the coordinates.
           var rect = Module["canvas"].getBoundingClientRect();
           var x, y;
-          
+
           // Neither .scrollX or .pageXOffset are defined in a spec, but
           // we prefer .scrollX because it is currently in a spec draft.
           // (see: http://www.w3.org/TR/2013/WD-cssom-view-20131217/)
@@ -4501,7 +4501,7 @@ function copyTempDouble(ptr) {
             x = event.pageX - (scrollX + rect.left);
             y = event.pageY - (scrollY + rect.top);
           }
-  
+
           // the canvas might be CSS-scaled compared to its backbuffer;
           // SDL-using content will want mouse coordinates in terms
           // of backbuffer units.
@@ -4509,7 +4509,7 @@ function copyTempDouble(ptr) {
           var ch = Module["canvas"].height;
           x = x * (cw / rect.width);
           y = y * (ch / rect.height);
-  
+
           Browser.mouseMovementX = x - Browser.mouseX;
           Browser.mouseMovementY = y - Browser.mouseY;
           Browser.mouseX = x;
@@ -4551,7 +4551,7 @@ function copyTempDouble(ptr) {
         Browser.updateCanvasDimensions(canvas, width, height);
         if (!noUpdates) Browser.updateResizeListeners();
       },windowedWidth:0,windowedHeight:0,setFullScreenCanvasSize:function () {
-        // check if SDL is available   
+        // check if SDL is available
         if (typeof SDL != "undefined") {
         	var flags = HEAPU32[((SDL.screen+Runtime.QUANTUM_SIZE*0)>>2)];
         	flags = flags | 0x00800000; // set SDL_FULLSCREEN flag
@@ -4559,7 +4559,7 @@ function copyTempDouble(ptr) {
         }
         Browser.updateResizeListeners();
       },setWindowedCanvasSize:function () {
-        // check if SDL is available       
+        // check if SDL is available
         if (typeof SDL != "undefined") {
         	var flags = HEAPU32[((SDL.screen+Runtime.QUANTUM_SIZE*0)>>2)];
         	flags = flags & ~0x00800000; // clear SDL_FULLSCREEN flag
@@ -5516,9 +5516,9 @@ var i64Math = (function() { // Emscripten wrapper
    * The above copyright notice and this permission notice shall be
    * included in all copies or substantial portions of the Software.
    *
-   * THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND, 
-   * EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY 
-   * WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  
+   * THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND,
+   * EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY
+   * WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
    *
    * IN NO EVENT SHALL TOM WU BE LIABLE FOR ANY SPECIAL, INCIDENTAL,
    * INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER
@@ -6506,59 +6506,59 @@ run();
 
 
 // Array.prototype.map function is in the public domain.
-// Production steps of ECMA-262, Edition 5, 15.4.4.19  
-// Reference: http://es5.github.com/#x15.4.4.19  
+// Production steps of ECMA-262, Edition 5, 15.4.4.19
+// Reference: http://es5.github.com/#x15.4.4.19
 if (!Array.prototype.map) {
 	Array.prototype.map = function (callback, thisArg) {
 		var T, A, k;
 		if (this == null) {
 			throw new TypeError(" this is null or not defined");
 		}
-		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.  
+		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.
 		var O = Object(this);
-		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".  
-		// 3. Let len be ToUint32(lenValue).  
+		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
+		// 3. Let len be ToUint32(lenValue).
 		var len = O.length >>> 0;
-		// 4. If IsCallable(callback) is false, throw a TypeError exception.  
-		// See: http://es5.github.com/#x9.11  
+		// 4. If IsCallable(callback) is false, throw a TypeError exception.
+		// See: http://es5.github.com/#x9.11
 		if ({}.toString.call(callback) != "[object Function]") {
 			throw new TypeError(callback + " is not a function");
 		}
-		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.  
+		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
 		if (thisArg) {
 			T = thisArg;
 		}
-		// 6. Let A be a new array created as if by the expression new Array(len) where Array is  
-		// the standard built-in constructor with that name and len is the value of len.  
+		// 6. Let A be a new array created as if by the expression new Array(len) where Array is
+		// the standard built-in constructor with that name and len is the value of len.
 		A = new Array(len);
-		// 7. Let k be 0  
+		// 7. Let k be 0
 		k = 0;
-		// 8. Repeat, while k < len  
+		// 8. Repeat, while k < len
 		while (k < len) {
 			var kValue, mappedValue;
-			// a. Let Pk be ToString(k).  
-			//   This is implicit for LHS operands of the in operator  
-			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.  
-			//   This step can be combined with c  
-			// c. If kPresent is true, then  
+			// a. Let Pk be ToString(k).
+			//   This is implicit for LHS operands of the in operator
+			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
+			//   This step can be combined with c
+			// c. If kPresent is true, then
 			if (k in O) {
-				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.  
+				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.
 				kValue = O[k];
-				// ii. Let mappedValue be the result of calling the Call internal method of callback  
-				// with T as the this value and argument list containing kValue, k, and O.  
+				// ii. Let mappedValue be the result of calling the Call internal method of callback
+				// with T as the this value and argument list containing kValue, k, and O.
 				mappedValue = callback.call(T, kValue, k, O);
-				// iii. Call the DefineOwnProperty internal method of A with arguments  
-				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},  
-				// and false.  
-				// In browsers that support Object.defineProperty, use the following:  
-				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });  
-				// For best browser support, use the following:  
+				// iii. Call the DefineOwnProperty internal method of A with arguments
+				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},
+				// and false.
+				// In browsers that support Object.defineProperty, use the following:
+				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });
+				// For best browser support, use the following:
 				A[k] = mappedValue;
 			}
-			// d. Increase k by 1.  
+			// d. Increase k by 1.
 			k++;
 		}
-		// 9. return A  
+		// 9. return A
 		return A;
 	};
 }
@@ -6712,7 +6712,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		};
 
 	})();
-}	
+}
 	</script>
 	<script type="text/javascript">
 /*!
@@ -6849,7 +6849,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	SHA256._digestsize = 32;
 
-})();	
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -6905,7 +6905,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	};
 
-})(); 
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -7057,7 +7057,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if message is a string
 		m = (
@@ -7098,7 +7098,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if ciphertext is a string
 		c = (
@@ -7540,9 +7540,9 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Electronic Code Book mode.
-	* 
+	*
 	* ECB applies the cipher directly against each block of the input.
-	* 
+	*
 	* ECB does not require an initialization vector.
 	*/
 	var ECB = C_mode.ECB = function () {
@@ -7577,7 +7577,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher block chaining
-	* 
+	*
 	* The first block is XORed with the IV. Subsequent blocks are XOR with the
 	* previous cipher output.
 	*/
@@ -7631,11 +7631,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher feed back
-	* 
+	*
 	* The cipher output is XORed with the plain text to produce the cipher output,
 	* which is then fed back into the cipher to produce a bit pattern to XOR the
 	* next block with.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var CFB = C_mode.CFB = function () {
@@ -7683,10 +7683,10 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Output feed back
-	* 
+	*
 	* The cipher repeatedly encrypts its own output. The output is XORed with the
 	* plain text to produce the cipher text.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var OFB = C_mode.OFB = function () {
@@ -7942,11 +7942,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	<script type="text/javascript">
 /*!
 * Random number generator with ArcFour PRNG
-* 
+*
 * NOTE: For best results, put code like
 * <body onclick='SecureRandom.seedTime();' onkeypress='SecureRandom.seedTime();'>
 * in your main HTML document.
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -8133,7 +8133,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 * Basic Javascript Elliptic Curve implementation
 * Ported loosely from BouncyCastle's Java EC code
 * Only Fp curves implemented for now
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -8194,7 +8194,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	/**
 	* return a sqrt root - the routine verifies that the calculation
 	* returns the right value - if none exists it returns null.
-	* 
+	*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
 	* Ported to JavaScript by bitaddress.org
 	*/
@@ -8483,7 +8483,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the Bitcoin protocol.
 		var enc = ec.integerToBytes(x, len);
 
-		// when compressed prepend byte depending if y point is even or odd 
+		// when compressed prepend byte depending if y point is even or odd
 		if (compressed) {
 			if (y.isEven()) {
 				enc.unshift(0x02);
@@ -8801,7 +8801,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	<script type="text/javascript">
 /*!
 * Basic JavaScript BN library - subset useful for RSA encryption. v1.3
-* 
+*
 * Copyright (c) 2005  Tom Wu
 * All Rights Reserved.
 * BSD License
@@ -10082,7 +10082,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 // Licensed under the MIT license:
 //   http://www.opensource.org/licenses/mit-license.php
 //
-// The word "QR Code" is registered trademark of 
+// The word "QR Code" is registered trademark of
 // DENSO WAVE INCORPORATED
 //   http://www.denso-wave.com/qrcode/faqpatent-e.html
 //
@@ -10296,7 +10296,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			var data = (this.errorCorrectLevel << 3) | maskPattern;
 			var bits = QRCode.Util.getBCHTypeInfo(data);
 
-			// vertical		
+			// vertical
 			for (var i = 0; i < 15; i++) {
 
 				var mod = (!test && ((bits >> i) & 1) == 1);
@@ -10979,7 +10979,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[2, 35, 17],
 	[2, 35, 13],
 
-	// 4		
+	// 4
 	[1, 100, 80],
 	[2, 50, 32],
 	[2, 50, 24],
@@ -10997,7 +10997,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 43, 19],
 	[4, 43, 15],
 
-	// 7		
+	// 7
 	[2, 98, 78],
 	[4, 49, 31],
 	[2, 32, 14, 4, 33, 15],
@@ -11015,7 +11015,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 36, 16, 4, 37, 17],
 	[4, 36, 12, 4, 37, 13],
 
-	// 10		
+	// 10
 	[2, 86, 68, 2, 87, 69],
 	[4, 69, 43, 1, 70, 44],
 	[6, 43, 19, 2, 44, 20],
@@ -11397,7 +11397,7 @@ Bitcoin.ECDSA = (function () {
 		* Parses a byte array containing a DER-encoded signature.
 		*
 		* This function will return an object of the form:
-		* 
+		*
 		* {
 		*   r: BigInteger,
 		*   s: BigInteger
@@ -11575,7 +11575,7 @@ Bitcoin.ECKey = (function () {
 			} else if (ECKey.isBase64Format(input)) {
 				bytes = Crypto.util.base64ToBytes(input);
 			}
-			
+
 			if (ECKey.isBase6Format(input)) {
 				this.priv = new BigInteger(input, 6);
 			} else if (bytes == null || bytes.length != 32) {
@@ -11675,7 +11675,7 @@ Bitcoin.ECKey = (function () {
 		return this;
 	};
 
-	// Sipa Private Key Wallet Import Format 
+	// Sipa Private Key Wallet Import Format
 	ECKey.prototype.getBitcoinWalletImportFormat = function () {
 		var bytes = this.getBitcoinPrivateKeyByteArray();
 		bytes.unshift(ECKey.privateKeyPrefix); // prepend 0x80 byte
@@ -11687,12 +11687,12 @@ Bitcoin.ECKey = (function () {
 		return privWif;
 	};
 
-	// Private Key Hex Format 
+	// Private Key Hex Format
 	ECKey.prototype.getBitcoinHexFormat = function () {
 		return Crypto.util.bytesToHex(this.getBitcoinPrivateKeyByteArray()).toString().toUpperCase();
 	};
 
-	// Private Key Base64 Format 
+	// Private Key Base64 Format
 	ECKey.prototype.getBitcoinBase64Format = function () {
 		return Crypto.util.bytesToBase64(this.getBitcoinPrivateKeyByteArray());
 	};
@@ -11700,7 +11700,7 @@ Bitcoin.ECKey = (function () {
 	ECKey.prototype.getBitcoinPrivateKeyByteArray = function () {
 		// Get a copy of private key as a byte array
 		var bytes = this.priv.toByteArrayUnsigned();
-		// zero pad if private key is less than 32 bytes 
+		// zero pad if private key is less than 32 bytes
 		while (bytes.length < 32) bytes.unshift(0x00);
 		return bytes;
 	};
@@ -11921,24 +11921,24 @@ Bitcoin.Util = {
 	},
 	// double sha256
 	dsha256: function (data) {
-		return Crypto.SHA256(Crypto.SHA256(data, { asBytes: true }), { asBytes: true });
+		return Crypto.util.hexToBytes(Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(data)]))
 	}
 };
 	</script>
 	<script type="text/javascript">
 /*
 * Copyright (c) 2010-2011 Intalio Pte, All Rights Reserved
-* 
+*
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-* 
+*
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
-* 
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -11958,7 +11958,7 @@ Bitcoin.Util = {
 	* N = Cpu cost
 	* r = Memory cost
 	* p = parallelization cost
-	* 
+	*
 	*/
 	window.Crypto_scrypt = function (passwd, salt, N, r, p, dkLen, callback) {
 		if (N == 0 || (N & (N - 1)) != 0) throw Error("N must be > 0 and a power of 2");
@@ -12270,16 +12270,16 @@ body { font-family: Arial; }
 
 #main { position: relative; text-align: center; margin: 0px auto; width: 1005px; }
 #logo { width: 578px; height: 80px; }
-		
+
 #paperarea { min-height: 120px; display: none; }
 #paperarea .keyarea { border: 2px solid #85A6B1; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
 #paperarea .artwallet .papersvg { width: 486px; height: 261px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
-		                                padding: 5px 5px 2px 5px; } 
-#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
+#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .btcaddress  
+#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		                                padding: 5px 5px 2px 5px; }
+#paperarea .artwallet .btcaddress
 {
 	position: absolute; top: 240px; left: 139px; z-index: 100; font-size: 10px; background-color: transparent;
 	font-weight:bold; color: #000000; margin: 0;
@@ -12288,11 +12288,11 @@ body { font-family: Arial; }
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
 		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
 		transform-origin:top left;         transform:rotate(-90deg);
-} 
-#paperarea .artwallet .btcprivwif  
+}
+#paperarea .artwallet .btcprivwif
 {
 	position: absolute; top: 236px; left: 346px; z-index: 100; font-size: 7px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -12302,7 +12302,7 @@ body { font-family: Arial; }
 #paperarea .artwallet .btcencryptedkey
 {
 	position: absolute; top: 174px; left: 332px; z-index: 100; font-size: 8px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;  
+	font-weight:bold; color: #000000; margin: 0;
 		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
 		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
 		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
@@ -12318,10 +12318,10 @@ body { font-family: Arial; }
 #detailarea .notes { text-align: left; font-size: 80%; padding: 0 0 20px 0; }
 #detailarea .pubqr .item .label { text-decoration: none; }
 #detailarea .pubqr .item { float: left; margin: 10px 0; position: relative; }
-#detailarea .pubqr .item.right { float: right; position: relative; top: 0; } 
+#detailarea .pubqr .item.right { float: right; position: relative; top: 0; }
 #detailarea .privqr .item .label { text-decoration: none; }
 #detailarea .privqr .item { float: left; margin: 0; position: relative; }
-#detailarea .privqr .item.right { float: right; position: relative; } 
+#detailarea .privqr .item.right { float: right; position: relative; }
 #detailarea .item { margin: 10px 0; position: relative; font-size: 90%; padding: 1px 0; }
 #detailarea .item.clear { clear: both; padding-top: 10px; }
 #detailarea .label { display: block; font-weight: bold; }
@@ -12331,7 +12331,7 @@ body { font-family: Arial; }
 #detailarea #detailqrcodeprivate { position: relative; float: left; margin: 0 10px 0 0; padding: 13px 11px 11px 11px; }
 #detailarea #detailqrcodeprivatecomp { position: relative; float: right; margin: 0 0 0 10px; padding: 13px 11px 11px 11px; }
 #detailpubkey { width: 590px; }
-#detailbip38commands { display: none; padding-top: 5px; }	
+#detailbip38commands { display: none; padding-top: 5px; }
 #vanityarea { text-align: left; }
 #vanityarea .label { text-decoration: underline; }
 #vanityarea .output { font-family: monospace; font-size: 1.25em; display: block; }
@@ -12341,7 +12341,7 @@ body { font-family: Arial; }
 #vanitystep2area { border-top: 2px solid #85A6B1; display: block; padding: 15px; }
 #vanitystep2inputs { padding: 0 15px 10px 15px; }
 #vanitycalc { margin-top: 5px; }
-		
+
 .englishjson { text-align: center; padding: 40px 0 20px 0; }
 .unittests { text-align: center; }
 .unittests div { width: 894px; font-family: monospace; text-align: left; margin: auto; padding: 5px; border: 1px solid black; }
@@ -12350,13 +12350,13 @@ body { font-family: Arial; }
 #busyblock.busy { display: block; }
 .hide { display: none; }
 .show { display: block; }
-	
+
 /* IE8 */
 .qrcodetable { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; }
 .qrcodetddark { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; padding: 0; margin: 0; width: 2px; height: 2px; background-color: #000000; }
 .qrcodetdlight { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; padding: 0; margin: 0; width: 2px; height: 2px; background-color: #ffffff; }
-		
-@media screen 	
+
+@media screen
 {
 	#tagline { margin: 0 0 15px 0; font-style: italic; }
 	.menu { text-align: left; }
@@ -12367,7 +12367,7 @@ body { font-family: Arial; }
 	.menu .tab.selected:hover { color: #000; }
 	.pagebreak { height: 50px; }
 	.commands { border-bottom: 2px solid #85A6B1;  padding: 10px 2px; margin-bottom: 0; }
-	.commands .row { padding: 0 0; text-align: left; } 
+	.commands .row { padding: 0 0; text-align: left; }
 	.commands .row.extra { padding-top: 6px; }
 	.commands span { padding: 0 10px; }
 	.commands span.print { float: right; }
@@ -12389,9 +12389,9 @@ body { font-family: Arial; }
 	#detailprivkey { width: 250px; }
 	#detailprivkeypassphrase { width: 250px; }
 	.paper .commands { border: 2px solid #85A6B1; }
-	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; } 
+	#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; }
 	#bulklimit { width: 45px; }
-			
+
 	.footer { font-size: 90%; clear: both; width: 750px; padding: 10px 0 10px 0; margin: 50px auto auto auto; }
 	.footer div span.item { padding: 10px; }
 	.footer .authorbtc { float: left; width: 470px; }
@@ -12426,12 +12426,12 @@ body { font-family: Arial; }
 	<div id="busyblock"></div>
 	<div id="main">
 		<div id="culturemenu">
-			<span><a href="?culture=en" id="cultureen" class="selected">English</a></span> | 
-			<span><a href="?culture=es" id="culturees">Español</a></span> | 
-			<span><a href="?culture=fr" id="culturefr">Français</a></span> | 
-			<span><a href="?culture=el" id="cultureel">ελληνικά</a></span> | 
-			<span><a href="?culture=it" id="cultureit">italiano</a></span> | 
-			<span><a href="?culture=de" id="culturede">Deutsch</a></span> | 
+			<span><a href="?culture=en" id="cultureen" class="selected">English</a></span> |
+			<span><a href="?culture=es" id="culturees">Español</a></span> |
+			<span><a href="?culture=fr" id="culturefr">Français</a></span> |
+			<span><a href="?culture=el" id="cultureel">ελληνικά</a></span> |
+			<span><a href="?culture=it" id="cultureit">italiano</a></span> |
+			<span><a href="?culture=de" id="culturede">Deutsch</a></span> |
 			<span><a href="?culture=cs" id="culturecs">Česky</a></span>
 		</div>
 		<img alt="groestlcoin.org" title="groestlcoin.org" id="logo" src="data:image/png;base64,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" />
@@ -12446,7 +12446,7 @@ body { font-family: Arial; }
 			<div class="tab" id="vanitywallet" onclick="ninja.tabSwitch(this);">Vanity Wallet</div>
 			<div class="tab" id="detailwallet" onclick="ninja.tabSwitch(this);">Wallet Details</div>
 		</div>
-		
+
 		<div id="generate">
 			<span id="generatelabelbitcoinaddress">Generating Groestlcoin Address...</span><br />
 			<span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span><span id="mousemovelimit"></span><br />
@@ -12482,9 +12482,9 @@ body { font-family: Arial; }
 							<span class="output" id="btcprivwif"></span>
 						</div>
 						<div id="singlesecret">SECRET</div>
-					</div>				
+					</div>
 				</div>
-				
+
 				<div id="singlesafety">
 					<p id="singletip1"><b>A Groestlcoin wallet</b> is as simple as a single pairing of a Groestlcoin address with its corresponding Groestlcoin private key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
 					<p id="singletip2"><b>To safeguard this wallet</b> you must print or otherwise record the Groestlcoin address and private key. It is important to make a backup copy of the private key and store it in a safe location. This site does not have knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and check that you have an authentic version from the author of this site by matching the SHA1 hash of this HTML with the SHA1 hash available in the signed version history document linked on the footer of this site. If you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated and the previously displayed private key will not be retrievable.	Your Groestlcoin private key should be kept a secret. Whomever you share the private key with has access to spend all the groestlcoins associated with that address. If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like cash.</p>
@@ -12510,7 +12510,7 @@ body { font-family: Arial; }
 				</div>
 				<div id="paperkeyarea"></div>
 			</div>
-			
+
 			<div id="bulkarea" class="walletarea">
 				<div class="commands">
 					<div id="bulkcommands" class="row">
@@ -12526,14 +12526,14 @@ body { font-family: Arial; }
 					<textarea rows="20" cols="88" id="bulktextarea"></textarea>
 				</div>
 				<div class="faqs">
-					<div id="bulkfaq1" class="faq"> 
+					<div id="bulkfaq1" class="faq">
 						<div id="bulkq1" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(1);">
 							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept groestlcoins on my website?</span>
 							<div id="bulke1" class="more"></div>
 						</div>
 						<div id="bulka1" class="answer">The traditional approach to accepting groestlcoins on your website requires that you install the official groestlcoin client daemon ("groestlcoind"). Many website hosting packages don't support installing the groestlcoin daemon. Also, running the groestlcoin daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the groestlcoin addresses and not the private keys to your web server. Then you don't have to worry about your groestlcoin wallet being stolen if your web server is hacked. </div>
 					</div>
-					<div id="bulkfaq2" class="faq"> 
+					<div id="bulkfaq2" class="faq">
 						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
 							<span id="bulklabelq2">How do I use a Bulk Wallet to accept groestlcoins on my website?</span>
 							<div id="bulke2" class="more"></div>
@@ -12550,7 +12550,7 @@ body { font-family: Arial; }
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="brainarea" class="walletarea">
 				<div id="braincommands" class="commands">
 					<div class="row">
@@ -12584,10 +12584,10 @@ body { font-family: Arial; }
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="vanityarea" class="walletarea">
 				<div id="vanitystep1label" class="commands expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(1);">
-					<span><label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label> <input type="button" id="vanitynewkeypair" 
+					<span><label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label> <input type="button" id="vanitynewkeypair"
 						value="Generate" onclick="ninja.wallets.vanitywallet.generateKeyPair();" /></span>
 					<div id="vanitystep1icon" class="more"></div>
 				</div>
@@ -12630,7 +12630,7 @@ body { font-family: Arial; }
 						<span class="output" id="vanityaddress"></span>
 						<br /><div class="notes" id="vanitylabelnotesbitcoinaddress">The above is your new address that should include your required prefix.</div>
 					</div>
-					
+
 					<div>
 						<span class="label" id="vanitylabelpublickeyhex">Vanity Public Key (HEX):</span>
 						<span class="output pubkeyhex" id="vanitypublickeyhex"></span>
@@ -12645,7 +12645,7 @@ body { font-family: Arial; }
 				</div>
 			</div>
 
-			<div id="detailarea" class="walletarea">	
+			<div id="detailarea" class="walletarea">
 				<div id="detailcommands" class="commands">
 					<span><label id="detaillabelenterprivatekey" for="detailprivkey">Enter Private Key</label></span>
 					<input type="text" id="detailprivkey" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
@@ -12670,7 +12670,7 @@ body { font-family: Arial; }
 							<span class="label" id="detaillabelbitcoinaddress">Groestlcoin Address</span>
 							<div id="detailqrcodepublic" class="qrcode_public"></div>
 							<span class="output" id="detailaddress"></span>
-						</div>					
+						</div>
 						<div class="item right">
 							<span class="label" id="detaillabelbitcoinaddresscomp">Groestlcoin Address Compressed</span>
 							<div id="detailqrcodepubliccomp" class="qrcode_public"></div>
@@ -12722,7 +12722,7 @@ body { font-family: Arial; }
 					</div>
 				</div>
 				<div class="faqs">
-					<div id="detailfaq1" class="faq"> 
+					<div id="detailfaq1" class="faq">
 						<div id="detailq1" class="question" onclick="ninja.wallets.detailwallet.openCloseFaq(1);">
 							<span id="detaillabelq1">How do I make a wallet using dice? What is B6?</span>
 							<div id="detaile1" class="more"></div>
@@ -12811,7 +12811,7 @@ ninja.privateKey = {
 			callback(new Error(ninja.translator.get("detailalertnotvalidprivatekey")));
 			return;
 		}
-		// first byte is always 0x01 
+		// first byte is always 0x01
 		else if (hex[0] != 0x01) {
 			callback(new Error(ninja.translator.get("detailalertnotvalidprivatekey")));
 			return;
@@ -12840,7 +12840,7 @@ ninja.privateKey = {
 				return;
 			}
 		}
-		// second byte for EC-multiplied key 
+		// second byte for EC-multiplied key
 		else if (hex[1] == 0x43) {
 			isECMult = true;
 			isCompPoint = (hex[2] & 0x20) != 0;
@@ -13252,7 +13252,7 @@ ninja.qrCode = {
 		return canvas;
 	},
 
-	// generate a QRCode and return it's representation as an Html table 
+	// generate a QRCode and return it's representation as an Html table
 	createTableHtml: function (text) {
 		var typeNumber = ninja.qrCode.getTypeNumber(text);
 		var qr = new QRCode(typeNumber, QRCode.ErrorCorrectLevel.H);
@@ -13275,7 +13275,7 @@ ninja.qrCode = {
 	},
 
 	// show QRCodes with canvas OR table (IE8)
-	// parameter: keyValuePair 
+	// parameter: keyValuePair
 	// example: { "id1": "string1", "id2": "string2"}
 	//		"id1" is the id of a div element where you want a QRCode inserted.
 	//		"string1" is the string you want encoded into the QRCode.
@@ -13556,7 +13556,7 @@ ninja.translator = {
 			"vanityalertinvalidinputcannotmultiple": "Entrée non valide. Il n'est pas possible de multiplier deux clés publiques. Sélectionner 'Ajouter' pour ajouter deux clés publiques pour obtenir une adresse Groestlcoin.",
 			"vanityprivatekeyonlyavailable": "Seulement disponible si vos combinez deux clés privées",
 			"vanityalertinvalidinputprivatekeysmatch": "Entrée non valide. La clé Privée des deux entrées est identique. Vous devez entrer deux clés différentes.",
-			
+
 			// header and menu html
 			"tagline": "Générateur De Porte-Monnaie Groestlcoin Javascript Hors-Ligne",
 			"generatelabelbitcoinaddress": "Création de l'adresse Groestlcoin...",
@@ -13568,7 +13568,7 @@ ninja.translator = {
 			"brainwallet": "Porte-Monnaie Cerveau",
 			"vanitywallet": "Porte-Monnaie Vanité",
 			"detailwallet": "Détails du Porte-Monnaie",
-			
+
 			// footer html
 			"footerlabeldonations": "Dons:",
 			"footerlabeltranslatedby": "Traduction: 1Gy7NYSJNUYqUdXTBow5d7bCUEJkUFDFSq",
@@ -13578,7 +13578,7 @@ ninja.translator = {
 			"footerlabelcopyright1": "Copyright bitaddress.org.",
 			"footerlabelcopyright2": "Les droits d'auteurs JavaScript sont inclus dans le code source.",
 			"footerlabelnowarranty": "Aucune garantie.",
-			
+
 			// single wallet html
 			"newaddress": "Générer Une Nouvelle Adresse",
 			"singleprint": "Imprimer",
@@ -13615,7 +13615,7 @@ ninja.translator = {
 			"bulklabela2li3": "Ajoutez une option dans votre panier en ligne pour que vos clients puissent vous payer en Groestlcoin. Quand un client choisi de vous payer en Groestlcoin, vous pouvez afficher une des adresses de votre base de donnée comme \"adresse de paiment\" pour votre client et sauvegarder cette adresse avec sa commande.",
 			"bulklabela2li4": "Vous avez maintenant besoin d'être avisé quand le paiement est reçu. Cherchez \"groestlcoin payment notification\" sur Google et inscrivez-vous à un service de notification de paiement Groestlcoin. Il y a plusieurs services qui vous avertiront via des services Web, API, SMS, Email, etc. Une fois que vous avez reçu la notification, qui devrait être programmée automatiquement, vous pouvez traiter la commande de votre client. Pour vérifier manuellement si un paiement est arrivé, vous pouvez utiliser Block Explorer. Remplacez ADRESSE par l'adresse Groestlcoin que vous souhaitez vérifier. La confirmation de la transaction pourrait prendre de 10 à 60 minutes pour être confirmée.<br />http://www.blockexplorer.com/address/ADRESSE<br /><br />Les transactions non confirmées peuvent être visualisées ici: http://blockchain.info/ <br />Vous devriez voir la transaction à l'intérieur de 30 secondes.",
 			"bulklabela2li5": "Les Groestlcoins vos s'accumuler de façon sécuritaire dans la chaîne de blocs. Utilisez le porte-monnaie original que vous avez généré à l'étape 1 pour les dépenser.",
-			
+
 			// brain wallet html
 			"brainlabelenterpassphrase": "Entrez votre mot de passe: ",
 			"brainlabelshow": "Afficher?",
@@ -13647,7 +13647,7 @@ ninja.translator = {
 			"vanitylabelnotespublickeyhex": "Celle-ci est la Clé Publique dans le format hexadécimal. ",
 			"vanitylabelprivatekey": "Clé Privée Vanité (WIF):",
 			"vanitylabelnotesprivatekey": "Celle-ci est la Clé Privée pour accéder à votre porte-monnaie. ",
-			
+
 			// detail wallet html
 			"detaillabelenterprivatekey": "Entrez la Clé Privée",
 			"detailkeyformats": "Key Formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38",
@@ -13749,7 +13749,7 @@ ninja.translator = {
 			"bulklabela2li3": "Παρέχετε στο καλάθι αγορών σας μια επιλογή για πληρωμή σε Groestlcoin. Όταν ο πελάτης επιλέγει να πληρώσει με Groestlcoin, θα εμφανίσετε σε αυτόν μια από τις διευθύνσεις από τη βάση δεδομένων, ως την «προσωπική του διεύθυνση πληρωμής» την οποία θα αποθηκεύσετε μαζί με την εντολή αγοράς.",
 			"bulklabela2li4": "Τώρα χρειάζεται να ειδοποιηθείτε μόλις γίνει η πληρωμή. Ψάξτε στο Google για «groestlcoin payment notification» κι εγγραφείτε σε τουλάχιστο μία υπηρεσία ειδοποίησης πληρωμής. Υπάρχουν διάφορες υπηρεσίες που θα σας ειδοποιήσουν με Web υπηρεσίες, API, SMS, Email, κλπ. Όταν λάβετε την ειδοποίηση, η οποία μπορεί να αυτοματοποιηθεί προγραμματιστικά, εκτελείτε την εντολή του πελάτη. Για να ελέγξετε χειροκίνητα την πληρωμή μπορείτε να χρησιμοποιήσετε τον Block Explorer. Αντικαταστήστε το THEADDRESSGOESHERE με τη Groestlcoin διεύθυνσή σας. Η επιβεβαίωση της πληρωμής ενδέχεται να διαρκέσει από δέκα λεπτά έως μία ώρα.<br />http://www.blockexplorer.com/address/THEADDRESSGOESHERE<br /><br />Μπορείτε να δείτε τις συναλλαγές που δεν έχουν επιβεβαιωθεί στο: http://blockchain.info/ <br />Θα πρέπει να δείτε τη συναλλαγή εκεί εντός 30 δευτερολέπτων.",
 			"bulklabela2li5": "Τα Groestlcoins θα συσσωρεύονται με ασφάλεια στην αλυσίδα των μπλοκ. Χρησιμοποιήστε το αρχικό πορτοφόλι που δημιουργήσατε στο βήμα 1 για να τα ξοδέψετε.",
-			
+
 			// brain wallet html
 			"brainlabelenterpassphrase": "Εισάγετε κωδικό: ",
 			"brainlabelshow": "Εμφάνιση;",
@@ -13759,7 +13759,7 @@ ninja.translator = {
 			"brainalgorithm": "Αλγόριθμος: SHA256(κωδικός)",
 			"brainlabelbitcoinaddress": "Διεύθυνση Groestlcoin:",
 			"brainlabelprivatekey": "Προσωπικό Κλειδί (Μορφή εισαγωγής σε πορτοφόλι):",
-			
+
 			// vanity wallet html
 			"vanitylabelstep1": "Βήμα 1 - Δημιουργήστε το «Ζεύγος κλειδιών του Βήματος 1»",
 			"vanitynewkeypair": "Δημιουργία",
@@ -13781,7 +13781,7 @@ ninja.translator = {
 			"vanitylabelnotespublickeyhex": "Παραπάνω είναι το Δημόσιο Κλειδί σε δεκαεξαδική μορφή. ",
 			"vanitylabelprivatekey": "Vanity Προσωπικό Κλειδί (WIF):",
 			"vanitylabelnotesprivatekey": "Παραπάνω είναι το Προσωπικό Κλειδί που θα φορτώσετε στο Πορτοφόλι σας. ",
-			
+
 			// detail wallet html
 			"detaillabelenterprivatekey": "Εισάγετε το Προσωπικό Κλειδί",
 			"detailkeyformats": "Key Formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38",
@@ -13916,7 +13916,7 @@ ninja.translator = {
 			"vanitylabelnotespublickeyhex": "Quella sopra è la Chiave Pubblica nel formato esadecimale. ",
 			"vanitylabelprivatekey": "Chiave privata del Vanity Wallet (WIF):",
 			"vanitylabelnotesprivatekey": "Quella sopra è la Chiave Privata nel formato esadecimale.  ",
-			
+
 			// detail wallet html
 			"detaillabelenterprivatekey": "Inserisci la Chiave Privata",
 			"detailkeyformats": "Key Formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38",
@@ -13939,7 +13939,7 @@ ninja.translator = {
 			"detaillabelq1": "How do I make a wallet using dice? What is B6?", //TODO: please translate
 			"detaila1": "An important part of creating a Groestlcoin wallet is ensuring the random numbers used to create the wallet are truly random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate physical randomness is with dice. To create a Groestlcoin private key you only need one six sided die which you roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6 or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click View Details. You will then see the Groestlcoin address associated with your private key. You should also make note of your private key in WIF format since it is more widely used." //TODO: please translate
 	    },
-	    
+
 	    "de": {
 			// javascript alerts or messages
 			"testneteditionactivated": "TESTNET AKTIVIERT",
@@ -13991,7 +13991,7 @@ ninja.translator = {
 			"singletip2": "<b>Um dieses Wallet zu sch&uuml;tzen,</b> musst du es entweder ausdrucken oder anderweitig die Groestlcoin-Adresse und den privaten Schl&uuml;ssel sichern. Fertige auf jeden Fall eine Kopie des privaten Schl&uuml;ssels an und bewahre sie an einem sicheren Ort auf. Der private Schl&uuml;ssel liegt nur lokal auf deinem Rechner vor und wurde nicht ins Internet &uuml;bertragen. Falls du dich mit PGP auskennst, kannst du dir diese all-in-one HTML-Seite herunterladen. Um zu &uuml;berpr&uuml;fen, ob die heruntergeladene Version authentisch ist, kannst du den SHA1-Hash dieser Seite mit dem SHA1-Hash in der signierten Versionsgeschichte am unteren Ende dieser Seite abgleichen. Wenn du diese Seite verl&auml;sst, sie neul&auml;dst bzw. den \"Neues Wallet erstellen\"-Button dr&uuml;ckst, wird ein neues Wallet erstellt und das vorherige wird nicht mehr abrufbar sein. Du solltest deinen privaten Schl&uuml;ssel geheim halten. Wer den privaten Schl&uuml;ssel hat, kann damit auf alle im Wallet befindlichen Groestlcoin zugreifen und sie nach Belieben ausgeben. Behandle dein gedrucktes Wallet wie echtes Geld!",
 			"singletip3": "Du kannst <b>Guthaben</b> zu deinem Wallet <b>hinzuf&uuml;gen</b>, indem du genau wie bei anderen &Uuml;berweisungen Groestlcoins an die Groestlcoin-Adresse deines Wallets schickst.",
 			"singletip4": "<b>&Uuml;berpr&uuml;fe dein Guthaben,</b> indem du deine Groestlcoin-Adresse auf blockchain.info bzw. blockexplorer.com eingibst.",
-			"singletip5": "Du kannst deine <b>Groestlcoins ausgeben</b>, indem du das gesamte mit deinem privaten Schl&uuml;ssel verbundene Guthaben auf deinen Account bei blockchain.info bzw. mtgox.com &uuml;bertr&auml;gst. Alternativ kannst du dir ein Groestlcoinprogramm herunterladen und deinen privaten Schl&uuml;ssel in dieses importieren. Beachte dabei aber, dass, sobald du Groestlcoins mit dem Programm sendest, dein privater Schl&uuml;ssel mit den anderen privaten Schl&uuml;sseln, die vom Programm bereitgestellt werden, verbunden wird. Bei einer &Uuml;berweisung wird etwas R&uuml;ckgeld an eine der Groestlcoin-Adressen des Programms geschickt. Deswegen musst du, um tats&auml;chlich dein gesamtes Guthaben zu sichern, ein Backup vom gesamten Wallet des Programms, das nun auch deinen importierten privaten Schl&uuml;ssel enth&auml;lt, anfertigen. Satoshi r&auml;t, dass man unter keinen Umst&auml;nden ein Wallet l&ouml;schen sollte.", 
+			"singletip5": "Du kannst deine <b>Groestlcoins ausgeben</b>, indem du das gesamte mit deinem privaten Schl&uuml;ssel verbundene Guthaben auf deinen Account bei blockchain.info bzw. mtgox.com &uuml;bertr&auml;gst. Alternativ kannst du dir ein Groestlcoinprogramm herunterladen und deinen privaten Schl&uuml;ssel in dieses importieren. Beachte dabei aber, dass, sobald du Groestlcoins mit dem Programm sendest, dein privater Schl&uuml;ssel mit den anderen privaten Schl&uuml;sseln, die vom Programm bereitgestellt werden, verbunden wird. Bei einer &Uuml;berweisung wird etwas R&uuml;ckgeld an eine der Groestlcoin-Adressen des Programms geschickt. Deswegen musst du, um tats&auml;chlich dein gesamtes Guthaben zu sichern, ein Backup vom gesamten Wallet des Programms, das nun auch deinen importierten privaten Schl&uuml;ssel enth&auml;lt, anfertigen. Satoshi r&auml;t, dass man unter keinen Umst&auml;nden ein Wallet l&ouml;schen sollte.",
 
 			// paper wallet html
 			"paperlabelhideart": "Grafische Gestaltung ausblenden?",
@@ -14053,7 +14053,7 @@ ninja.translator = {
 
 			// detail wallet html
 			"detaillabelenterprivatekey": "Privaten Schl&uuml;ssel eingeben:",
-			"detailkeyformats": "Unterstützte Formate: WIF, WIFC, HEX, B64, B6, MINI, BIP38",	
+			"detailkeyformats": "Unterstützte Formate: WIF, WIFC, HEX, B64, B6, MINI, BIP38",
 			"detailview": "Details anzeigen",
 			"detailprint": "Drucken",
 			"detaillabelnote1": "Der private Schl&uuml;ssel deines Wallets ist eine geheime, einzigartige Zeichenfolge, die nur du kennst. Er kann auf mehrer Arten dargestellt werden. Unten findest du die zugeh&ouml;rige Groestlcoin-Adresse bzw. &ouml;ffentlichen Schl&uuml;ssel sowie den privaten Schl&uuml;ssel in den verbreitetsten Formaten.",
@@ -14071,7 +14071,7 @@ ninja.translator = {
 			"detaillabelpassphrase": "Passwort f&uuml;r BIP38 eingeben",
 			"detaildecrypt": "Entschl&uuml;sseln",
 			"detaillabelq1": "Wie erstelle ich ein Wallet mithilfe eines Würfels? Was versteht man unter B6?",
-			"detaila1": "Beim Erstellen eines Groestlcoin-Wallets sollten die dafür genutzten Zufallszahlen auch tatsächlich zufällig sein. Ein echter Würfel liefert wesentlich zufälligere Zahlen als ein Computer. Um einen privaten Schlüssel zu erstellen, sind lediglich 99 Würfe mit einem normalen Würfel nötig. Nach jedem Wurf solltest du die Augenzahl nach folgendem Muster aufschreiben: 1-\>1, 2-\>2, 3-\>3, 4-\>4, 5-\>5, 6-\>0. Die so entstandene Zufallszahl stellt deinen privaten Schlüssel in B6 bzw. zur Basis 6 dar. Diesen 99 Zeichen langen Basis-6-Schlüssel kannst du im obigen Eingabefeld eingeben und dir dann die zugehörigen Details anzeigen lassen. U.a. wird dir die zu deinem privaten Schlüssel gehörende Groestlcoin-Adresse angezeigt. Es wäre ratsam, sich die ebenfalls berechnete WIF-Version des privaten Schlüssels zu notieren, weil sie häufiger genutzt wird."		
+			"detaila1": "Beim Erstellen eines Groestlcoin-Wallets sollten die dafür genutzten Zufallszahlen auch tatsächlich zufällig sein. Ein echter Würfel liefert wesentlich zufälligere Zahlen als ein Computer. Um einen privaten Schlüssel zu erstellen, sind lediglich 99 Würfe mit einem normalen Würfel nötig. Nach jedem Wurf solltest du die Augenzahl nach folgendem Muster aufschreiben: 1-\>1, 2-\>2, 3-\>3, 4-\>4, 5-\>5, 6-\>0. Die so entstandene Zufallszahl stellt deinen privaten Schlüssel in B6 bzw. zur Basis 6 dar. Diesen 99 Zeichen langen Basis-6-Schlüssel kannst du im obigen Eingabefeld eingeben und dir dann die zugehörigen Details anzeigen lassen. U.a. wird dir die zu deinem privaten Schlüssel gehörende Groestlcoin-Adresse angezeigt. Es wäre ratsam, sich die ebenfalls berechnete WIF-Version des privaten Schlüssels zu notieren, weil sie häufiger genutzt wird."
 		},
 
 		"cs": {
@@ -14580,8 +14580,8 @@ ninja.wallets.bulkwallet = {
 			bulkWallet.csv.push((bulkWallet.csvRowLimit - bulkWallet.csvRowsRemaining + bulkWallet.csvStartIndex)
 								+ ",\"" + key.getBitcoinAddress() + "\",\"" + key.toString("wif")
 			//+	"\",\"" + key.toString("wifcomp")    // uncomment these lines to add different private key formats to the CSV
-			//+ "\",\"" + key.getBitcoinHexFormat() 
-			//+ "\",\"" + key.toString("base64") 
+			//+ "\",\"" + key.getBitcoinHexFormat()
+			//+ "\",\"" + key.toString("base64")
 								+ "\"");
 
 			document.getElementById("bulktextarea").value = ninja.translator.get("bulkgeneratingaddresses") + bulkWallet.csvRowsRemaining;
@@ -14730,7 +14730,7 @@ ninja.wallets.vanitywallet = {
 				privateKeyWif = ninja.translator.get("vanityprivatekeyonlyavailable");
 				var pubKeyHex = (ninja.publicKey.isPublicKeyHexFormat(input1KeyString)) ? input1KeyString : input2KeyString;
 				var ecKey = (ninja.privateKey.isPrivateKey(input1KeyString)) ? new Bitcoin.ECKey(input1KeyString) : new Bitcoin.ECKey(input2KeyString);
-				// add 
+				// add
 				if (document.getElementById("vanityradioadd").checked) {
 					var pubKeyCombined = ninja.publicKey.getByteArrayFromAdding(pubKeyHex, ecKey.getPubKeyHex());
 				}

@@ -100,6 +100,6 @@ Bitcoin.Util = {
 	},
 	// double sha256
 	dsha256: function (data) {
-		return Crypto.SHA256(Crypto.SHA256(data, { asBytes: true }), { asBytes: true });
+		return Crypto.util.hexToBytes(Module.ccall('GroestlCoinHash', 'string', ['string'], [Crypto.util.bytesToHex(data)]))
 	}
 };
